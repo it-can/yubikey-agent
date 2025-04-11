@@ -1,8 +1,10 @@
+```
 git clone git@github.com:it-can/yubikey-agent.git
 
 cd yubikey-agent
 
 go run . -setup
+```
 
 ---
 
