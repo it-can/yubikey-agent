@@ -1,3 +1,9 @@
+git clone git@github.com:it-can/yubikey-agent.git
+cd yubikey-agent
+go run . -setup
+
+---
+
 # yubikey-agent
 
 yubikey-agent is a seamless ssh-agent for YubiKeys.
