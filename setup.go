@@ -104,6 +104,15 @@ func runSetup(yk *piv.YubiKey) {
 	if _, err := rand.Read(key[:]); err != nil {
 		log.Fatal(err)
 	}
+
+	// 🔐 Show the management key in hex format
+	fmt.Println("")
+	fmt.Println("📌 Your new PIV Management Key (24 bytes, hex):")
+	fmt.Printf("%x\n", key)
+	fmt.Println("")
+	fmt.Println("⚠️ Save this key securely! Without it, you cannot manage this YubiKey again.")
+	fmt.Println("🔒 Consider storing it in a password manager or secure vault.")
+	
 	if err := yk.SetManagementKey(piv.DefaultManagementKey, key); err != nil {
 		log.Println("‼️  The default Management Key did not work")
 		log.Println("")
